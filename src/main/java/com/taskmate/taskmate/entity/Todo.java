@@ -25,6 +25,9 @@ public class Todo {
 
     private boolean completed = false; // Completion status (default: false)
 
+    @Column(length = 32)
+    private String importance; // Importance level (low, middle, high)
+
     public void toggleCompleted() {
         this.completed = !this.completed;
     }

@@ -56,4 +56,11 @@ public class TodoController {
         Todo updatedTodo = todoService.toggleTodoCompleted(id);
         return ResponseEntity.ok(updatedTodo);
     }
+
+    // Update the importance of a todo
+    @PatchMapping("/{id}/changeimportance")
+    public ResponseEntity<Todo> updateTodoImportance(@PathVariable("id") Long id, @RequestParam("importance") String importance) {
+        Todo updatedTodo = todoService.updateTodoImportance(id, importance);
+        return ResponseEntity.ok(updatedTodo);
+    }
 }

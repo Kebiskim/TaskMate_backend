@@ -10,5 +10,6 @@ CREATE TABLE IF NOT EXISTS todos (
     title VARCHAR(255) NOT NULL,
     description TEXT,
     date DATE NOT NULL,
-    completed BOOLEAN DEFAULT FALSE
+    completed BOOLEAN DEFAULT FALSE,
+    importance VARCHAR(32)
 );

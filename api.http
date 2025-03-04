@@ -5,7 +5,8 @@ Content-Type: application/json
 {
   "title": "회의 준비",
   "description": "10시까지 회의 자료 준비",
-  "date": "2025-03-05"
+  "date": "2025-03-05",
+  "importance": "low"
 }
 
 ### 특정 날짜의 할 일 조회 (GET)
@@ -16,3 +17,6 @@ DELETE http://localhost:8080/api/todos/1
 
 ### 할 일 상태 변경 (PATCH)
 PATCH http://localhost:8080/api/todos/1/toggle
+
+### 할 일 우선순위 변경 (PATCH)
+PATCH http://localhost:8080/api/todos/8/changeimportance?importance=high

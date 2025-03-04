@@ -47,4 +47,16 @@ public class TodoService {
             throw new RuntimeException("Todo not found with id " + id);
         }
     }
+
+    // Update the importance of a todo
+    public Todo updateTodoImportance(Long id, String importance) {
+        Optional<Todo> todoOptional = todoRepository.findById(id);
+        if (todoOptional.isPresent()) {
+            Todo todo = todoOptional.get();
+            todo.setImportance(importance);
+            return todoRepository.save(todo);
+        } else {
+            throw new RuntimeException("Todo not found with id " + id);
+        }
+    }
 }
