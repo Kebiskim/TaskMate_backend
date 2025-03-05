@@ -1,0 +1,5 @@
+-- DML Script to insert sample data into the 'todos' table
+INSERT INTO todos (title, description, date, completed) VALUES
+('Prepare for meeting', 'Prepare meeting materials by 10 AM', '2025-03-05', FALSE),
+('Buy groceries', 'Buy milk, eggs, and bread', '2025-03-06', FALSE),
+('Workout', 'Go to the gym for a workout session', '2025-03-07', TRUE);

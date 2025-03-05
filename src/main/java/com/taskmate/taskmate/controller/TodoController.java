@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/todos")
-@CrossOrigin(origins = "http://localhost:3000") // Allow CORS for frontend
+@CrossOrigin(origins = "${cors.allowed.origins}") // Allow CORS for frontend
 public class TodoController {
 
     private final TodoService todoService;
@@ -28,7 +28,7 @@ public class TodoController {
 
     // Get todos for a specific date
     @GetMapping("/{date}")
-    public ResponseEntity<List<Todo>> getTodosByDate(@PathVariable String date) {
+    public ResponseEntity<List<Todo>> getTodosByDate(@PathVariable("date") String date) {
         LocalDate localDate = LocalDate.parse(date);
         List<Todo> todos = todoService.getTodosByDate(localDate);
         return ResponseEntity.ok(todos);
@@ -36,7 +36,7 @@ public class TodoController {
 
     // Get todos for a date range
     @GetMapping
-    public ResponseEntity<List<Todo>> getTodosByDateRange(@RequestParam String start, @RequestParam String end) {
+    public ResponseEntity<List<Todo>> getTodosByDateRange(@RequestParam("start") String start, @RequestParam("end") String end) {
         LocalDate startDate = LocalDate.parse(start);
         LocalDate endDate = LocalDate.parse(end);
         List<Todo> todos = todoService.getTodosByDateRange(startDate, endDate);
@@ -45,15 +45,22 @@ public class TodoController {
 
     // Delete a todo
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTodo(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteTodo(@PathVariable("id") Long id) {
         todoService.deleteTodo(id);
         return ResponseEntity.noContent().build();
     }
 
     // Toggle the completed status of a todo
     @PatchMapping("/{id}/toggle")
-    public ResponseEntity<Todo> toggleTodoCompleted(@PathVariable Long id) {
+    public ResponseEntity<Todo> toggleTodoCompleted(@PathVariable("id") Long id) {
         Todo updatedTodo = todoService.toggleTodoCompleted(id);
+        return ResponseEntity.ok(updatedTodo);
+    }
+
+    // Update the importance of a todo
+    @PatchMapping("/{id}/changeimportance")
+    public ResponseEntity<Todo> updateTodoImportance(@PathVariable("id") Long id, @RequestParam("importance") String importance) {
+        Todo updatedTodo = todoService.updateTodoImportance(id, importance);
         return ResponseEntity.ok(updatedTodo);
     }
 }

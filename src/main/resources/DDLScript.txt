@@ -1,0 +1,15 @@
+-- Create the database if it does not exist
+CREATE DATABASE IF NOT EXISTS calendar_db;
+
+-- Select the database
+USE calendar_db;
+
+-- Create the 'todos' table
+CREATE TABLE IF NOT EXISTS todos (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    date DATE NOT NULL,
+    completed BOOLEAN DEFAULT FALSE,
+    importance VARCHAR(32)
+);
