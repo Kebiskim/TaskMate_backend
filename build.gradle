@@ -37,12 +37,11 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     runtimeOnly 'com.h2database:h2'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 
-
+    // Springdoc OpenAPI for Swagger integration
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
-    implementation 'org.springdoc:springdoc-openapi-ui:1.6.14'
-    runtimeOnly 'mysql:mysql-connector-java:8.0.32'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-core:10.1.36'  // Make sure it's aligned with Jakarta EE version
 }
 
 

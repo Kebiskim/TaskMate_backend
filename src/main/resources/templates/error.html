@@ -1,3 +1,4 @@
+<!-- error.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,8 @@
 </head>
 <body>
     <h1>Error</h1>
-    <p>Status Code: ${statusCode}</p>
-    <p>${errorMessage}</p>
+    <p>Status Code: <span th:text="${statusCode}"></span></p>
+    <p th:text="${errorMessage}"></p>
     <p>We're sorry, but something went wrong. Please try again later.</p>
 </body>
 </html>

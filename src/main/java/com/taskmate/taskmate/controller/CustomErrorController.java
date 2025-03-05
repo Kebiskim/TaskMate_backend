@@ -18,12 +18,18 @@ public class CustomErrorController implements ErrorController {
         String errorMessage = "An unexpected error occurred";
 
         if (statusCode != null) {
+            // Print the status code for debugging
+            System.out.println("Error Status Code: " + statusCode);
+
             switch (statusCode) {
                 case 404:
                     errorMessage = "404 - Page Not Found";
                     break;
                 case 500:
                     errorMessage = "500 - Internal Server Error";
+                    break;
+                default:
+                    errorMessage = "An unexpected (general) error occurred";
                     break;
             }
             // Add status code and error message to the model
