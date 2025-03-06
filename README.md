@@ -175,6 +175,7 @@ http://localhost:8080/swagger-ui/swagger-ui/index.html
 ---
 
 ### 폴더구조
+```
 TaskMate_BackEnd/
 ├── .gradle/
 ├── .vscode/
@@ -217,3 +218,4 @@ TaskMate_BackEnd/
 ├── api.http                                       # API test HTTP request file
 ├── build.gradle                                   # Gradle build configuration
 └── README.md                                      # Project documentation
+```
