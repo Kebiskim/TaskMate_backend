@@ -4,7 +4,6 @@ Content-Type: application/json
 
 {
   "title": "회의 준비",
-  "description": "10시까지 회의 자료 준비",
   "date": "2025-03-05",
   "importance": "low"
 }
