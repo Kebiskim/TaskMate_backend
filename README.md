@@ -125,14 +125,14 @@ http://localhost:8080/swagger-ui/swagger-ui/index.html
 ---
 
 
-### **참고: 테스트 결과 기록 방법**
+### **참고(1): 테스트 결과 기록 방법**
 - `✅ Pass` → 테스트 성공  
 - `❌ Fail` → 테스트 실패 (버그 수정 필요)  
 - `⚠️ Blocked` → 환경 문제로 테스트 불가능  
 
 ---
 
-### **참고: 폴더구조**
+### **참고(2): 폴더구조**
 ```
 TaskMate_BackEnd/
 ├── .gradle/
