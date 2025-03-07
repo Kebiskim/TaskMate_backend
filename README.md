@@ -22,7 +22,7 @@ code --install-extension vscjava.vscode-java-pack \
     && code --install-extension Pivotal.vscode-spring-boot \
     && code --install-extension vscjava.vscode-spring-initializr
 4. MySQL 설치 (v8.0.41)  
-5. DBeaver 설치하여 MySQL Connection 생성 후, "TaskMate_BackEnd\src\main\resources\DDLScript.txt 쿼리 및 DMLScript.txt 쿼리 실행하여 DB 및 테이블 생성  
+5. DBeaver 설치하여 MySQL Connection 생성 후, "TaskMate_BackEnd\src\main\resources\DDLScript.txt" 쿼리 및 "DMLScript.txt" 쿼리 실행하여 DB 및 테이블 생성  
 6. 터미널에 ./gradlew build 명령어 입력  
 7. VSCode 좌측 Spring Boot Dashboard 탭에서 APPS 목록 우측 Run 클릭하여 실행  
 
