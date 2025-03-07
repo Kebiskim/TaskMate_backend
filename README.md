@@ -139,7 +139,6 @@ TaskMate_BackEnd/
 │   │   │       │   ├── CustomErrorController.java     # Custom error page controller
 │   │   │       │   ├── HomeController.java            # Homepage controller
 │   │   │       │   └── TodoController.java            # Todo API controller
-│   │   │       │   └── 
 │   │   │       ├── entity/                            # Database entities
 │   │   │       │   └── Todo.java                      # Todo entity class
 │   │   │       ├── repository/                        # JPA repositories
