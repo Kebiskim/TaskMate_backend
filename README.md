@@ -64,8 +64,6 @@ http://localhost:8080/swagger-ui/swagger-ui/index.html
 | **실제 결과 (Actual Result)** | ✅ 할일 등록 완료 (Pass) |  
 | **테스트 상태 (Status)** | ✅ Pass |
 
----
-
 ## 기능: 특정 날짜의 할일 조회 (Get Todo)
 
 | Test Case ID | TC002 |
@@ -78,8 +76,6 @@ http://localhost:8080/swagger-ui/swagger-ui/index.html
 | **예상 결과 (Expected Result)** | 해당 날짜에 등록된 할일 전체 목록 표시 |  
 | **실제 결과 (Actual Result)** | ✅ 할일 목록 정상 표시 (Pass) |  
 | **테스트 상태 (Status)** | ✅ Pass |  
-
----
 
 ## 기능: 할일 삭제 (Delete Todo)
 
@@ -94,8 +90,6 @@ http://localhost:8080/swagger-ui/swagger-ui/index.html
 | **실제 결과 (Actual Result)** | ✅ 할일 정상 삭제 (Pass) |  
 | **테스트 상태 (Status)** | ✅ Pass |
 
----
-
 ## 기능: 할일 완료 상태 변경 (Change Todo Status)
 
 | Test Case ID | TC004 |
@@ -107,8 +101,6 @@ http://localhost:8080/swagger-ui/swagger-ui/index.html
 | **예상 결과 (Expected Result)** | 선택한 할일 완료 여부 변경 |  
 | **실제 결과 (Actual Result)** | ✅ 할일 완료 여부 정상 변경 (Pass) |  
 | **테스트 상태 (Status)** | ✅ Pass |  
-
----
 
 ## 기능: 할일 우선순위 변경 (Change Todo Priority)
 
@@ -123,8 +115,6 @@ http://localhost:8080/swagger-ui/swagger-ui/index.html
 | **테스트 상태 (Status)** | ✅ Pass |  
 
 ---
-
-
 ### **참고(1): 테스트 결과 기록 방법**
 - `✅ Pass` → 테스트 성공  
 - `❌ Fail` → 테스트 실패 (버그 수정 필요)  
