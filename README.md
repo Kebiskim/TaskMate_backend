@@ -132,7 +132,7 @@ http://localhost:8080/swagger-ui/swagger-ui/index.html
 
 ---
 
-### 폴더구조
+### **참고: 폴더구조**
 ```
 TaskMate_BackEnd/
 ├── .gradle/
